@@ -3,7 +3,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 // import axios from 'axios';
 import Stack from './sdk/entry';
-import { onEntryChange } from "./sdk/entry.js";
+// import { onEntryChange } from "./sdk/entry.js";
 
 const App = () => {
 
@@ -14,10 +14,10 @@ const App = () => {
     return header[0][0]
   }
 
-  const updateData = () => {
-    const fetchedData = getData();
-    setHeader(fetchedData);
-  };
+  // const updateData = () => {
+  //   const fetchedData = getData();
+  //   setHeader(fetchedData);
+  // };
 
   useEffect(() => {
 
@@ -26,7 +26,7 @@ const App = () => {
       console.log('I am the great and powerful res: ', res)
     })
 
-    onEntryChange(updateData);
+    // onEntryChange(updateData);
 
   }, [])
 
