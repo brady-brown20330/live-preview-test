@@ -7,23 +7,23 @@ const Stack = contentstack.Stack({
   delivery_token: process.env.REACT_APP_DELIVERY_TOKEN,
   environment: process.env.REACT_APP_ENVIRONMENT,
   region: process.env.REACT_APP_REGION ? process.env.REACT_APP_REGION : "us",
-  // live_preview: {
-  //   management_token: process.env.REACT_APP_MANAGEMENT_TOKEN ,
-  //   enable: true,
-  //   host: 'api.contentstack.io'
-  // },
+  live_preview: {
+    management_token: process.env.REACT_APP_MANAGEMENT_TOKEN,
+    enable: true,
+    host: 'api.contentstack.io'
+  },
 });
 
-// Stack.setHost("api.contentstack.io")
+Stack.setHost("api.contentstack.io")
 
-// // initialize LP
-// ContentstackLivePreview.init({
-//   enable: true,
-//   stackSdk: Stack,
-//   ssr: false,
-// });
+// initialize LP
+ContentstackLivePreview.init({
+  enable: true,
+  stackSdk: Stack,
+  ssr: false,
+});
 
-// export const onEntryChange = ContentstackLivePreview.onEntryChange;
+export const onEntryChange = ContentstackLivePreview.onEntryChange;
 
 
 export default {
