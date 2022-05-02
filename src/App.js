@@ -4,13 +4,14 @@ import React, {useEffect, useState} from 'react';
 // import axios from 'axios';
 import Stack from './sdk/entry';
 import { onEntryChange } from "./sdk/entry.js";
-
+import { addEditableTags } from '@contentstack/utils'
 function App() {
 
   const [header, setHeader] = useState([])
 
   const getData = async () => {
     const header = await Stack.getEntry("header", "en-us")
+    addEditableTags(header[0][0], 'header', false, "en-us")
     return header[0][0]
   }
 

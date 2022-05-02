@@ -23,6 +23,8 @@ ContentstackLivePreview.init({
   ssr: false,
 });
 
+contentstack.Utils.addEditableTags()
+
 export const onEntryChange = ContentstackLivePreview.onEntryChange;
 
 
