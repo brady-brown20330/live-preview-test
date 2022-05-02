@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react';
 import Stack from './sdk/entry';
 import { onEntryChange } from "./sdk/entry.js";
 
-function App() {
+const App = () => {
 
   const [header, setHeader] = useState([])
 
