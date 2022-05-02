@@ -12,6 +12,11 @@ const Stack = contentstack.Stack({
     enable: true,
     host: 'api.contentstack.io'
   },
+  clientUrlParams: {
+    protocol: "https",
+    host: "app.contentstack.com",
+    // port: 443,
+},
 });
 
 Stack.setHost("api.contentstack.io")
