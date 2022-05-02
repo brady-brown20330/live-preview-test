@@ -15,8 +15,11 @@ function App() {
   }
 
   const updateData = () => {
-    const fetchedData = getData();
-    setHeader(fetchedData);
+  const fetchedData = getData();
+    
+    setHeader(fetchedData.then(function(result) {
+      setHeader(result)
+   }));
   };
 
   useEffect(() => {
