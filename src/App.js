@@ -47,9 +47,13 @@ function App() {
         <p{...header.$.subtext}>
           {header.subtext}
         </p>
+        <div>
+        <p {...header.$.subtext}>{header.copyright}</p>
+      </div>
       </header>
     </div>
   );
+
 }
 
 export default App;
